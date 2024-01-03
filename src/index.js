@@ -10,6 +10,6 @@ app.listen(3000, async () => {
   connect();
   const repo = new TweetRepository();
 
-  const tweet = await repo.destory("6594587f379921a383641c78");
-  console.log(tweet);
+  // const tweet = await repo.destory("6594587f379921a383641c78");
+  // console.log(tweet);
 });
