@@ -5,12 +5,13 @@ const app = express();
 
 const { HashTagRepository, TweetRepository } = require("./repository/index.js");
 
+const { TweetService } = require("./service/index.js");
 app.listen(3000, async () => {
   console.log("connected port to 3000");
   connect();
-  const repo = new HashTagRepository();
-  await repo.bulkCreate([
-    { title: "Trend", tweet: [] },
-    { title: "MODI", tweet: [] },
-  ]);
+
+  const tweetService = new TweetService();
+  const tweet = tweetService.create({
+    content: "i am #excited and going to be #fun, #my new JOb #LoREM IPSUm",
+  });
 });

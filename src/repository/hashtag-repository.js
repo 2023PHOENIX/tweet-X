@@ -34,6 +34,16 @@ class HashTagRepository {
       console.log(e);
     }
   }
+  async findByName(titleList) {
+    try {
+      const tags = await HashTag.find({
+        title: titleList,
+      });
+      return tags;
+    } catch (e) {
+      console.log(e);
+    }
+  }
 }
 
 module.exports = HashTagRepository;
