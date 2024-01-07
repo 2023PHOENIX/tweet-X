@@ -1,3 +1,1 @@
-module.exports = {
-  TweetService: require("./tweet-service"),
-};
+export { default as TweetService } from "./tweet-service.js";

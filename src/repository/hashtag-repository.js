@@ -1,4 +1,4 @@
-const { HashTag } = require("../models/index.js");
+import HashTag from "../models/hashtags.js";
 
 class HashTagRepository {
   async create(data) {
@@ -45,5 +45,4 @@ class HashTagRepository {
     }
   }
 }
-
-module.exports = HashTagRepository;
+export default HashTagRepository;
