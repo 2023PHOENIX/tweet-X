@@ -36,6 +36,11 @@ class TweetService {
     // WARN: need to do add hashtag array in the tweets db.
     return tweet;
   }
+
+  async get(tweetId) {
+    const tweet = await this.tweetRepository.getWithComments(tweetId);
+    return tweet;
+  }
 }
 
 // HACK:  bulcreate |

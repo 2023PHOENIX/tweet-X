@@ -1,6 +1,6 @@
 import Tweet from "./../models/tweet.js";
 import CrudRepository from "./crud-repository.js";
-
+// TODO: populate the chain of comments during the fetch.
 class TweetRepository extends CrudRepository {
   constructor() {
     super(Tweet);
